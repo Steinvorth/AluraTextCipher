@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -57,10 +63,11 @@ textarea {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    width: 100%; 
 }
 
 .encrypt-btn, .decrypt-btn {
-    width: 48%;
+    width: 48%; 
     padding: 10px;
     font-size: 16px;
     border: none;
