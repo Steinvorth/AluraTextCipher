@@ -18,9 +18,10 @@ function decrypt(text) {
     return decryptedText;
 }
 
+// function to use button to copy text to clipboard
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(function() {
-        alert('Texto copiado al portapapeles');
+        console.log("copiado!")
     }, function(err) {
         console.error('Error al copiar: ', err);
     });
@@ -30,7 +31,7 @@ document.querySelector('.encrypt-btn').addEventListener('click', function() {
     const inputText = document.getElementById('text-input').value;
     const encryptedText = encrypt(inputText);
 
-    // Update the right panel with the encrypted text and add a copy button
+    // Update Right Panel with copy button
     const rightPanel = document.querySelector('.right-panel');
     rightPanel.innerHTML = `
         <div id="result-container">
@@ -39,7 +40,7 @@ document.querySelector('.encrypt-btn').addEventListener('click', function() {
         </div>
     `;
 
-    // Add event listener to the copy button
+    // After its added, we can add the alert.
     document.getElementById('copy-btn').addEventListener('click', function() {
         copyToClipboard(encryptedText);
     });
@@ -49,7 +50,7 @@ document.querySelector('.decrypt-btn').addEventListener('click', function() {
     const inputText = document.getElementById('text-input').value;
     const decryptedText = decrypt(inputText);
 
-    // Update the right panel with the decrypted text and add a copy button
+    // Update right panel with the text, and add copy button
     const rightPanel = document.querySelector('.right-panel');
     rightPanel.innerHTML = `
         <div id="result-container">
@@ -58,7 +59,7 @@ document.querySelector('.decrypt-btn').addEventListener('click', function() {
         </div>
     `;
 
-    // Add event listener to the copy button
+    // After its added, we can add the alert.
     document.getElementById('copy-btn').addEventListener('click', function() {
         copyToClipboard(decryptedText);
     });

@@ -102,6 +102,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #copy-btn {
@@ -113,6 +114,7 @@ textarea {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    max-width: fit-content;
 }
 
 #copy-btn:hover {
@@ -123,4 +125,35 @@ textarea {
     font-size: 18px;
     color: #23395B;
     margin-bottom: 20px;
+}
+
+/* Size for Tablets */
+@media (max-width: 1024px) {
+    body {
+        display: flex;
+        margin-top: -20%;
+    }
+
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        width: 90%; 
+    }
+
+    .left-panel, .right-panel {
+        width: 100%; 
+    }
+
+    .right-panel {
+        margin-top: 20px; 
+        padding-top: 0;
+        min-height: 50%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-panel img {
+        display: none; 
+    }
 }
