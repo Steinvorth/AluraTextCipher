@@ -103,6 +103,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #copy-btn {
@@ -155,5 +156,42 @@ textarea {
 
     .right-panel img {
         display: none; 
+    }
+}
+
+/* Size for phones */
+@media (max-width: 600px) {
+    body {
+        margin-top: 0;
+        padding: 0;
+        align-items: flex-start; 
+    }
+
+    .container {
+        width: 100%; 
+        margin: 0; 
+        flex-direction: column;
+        border-radius: 0; 
+        box-shadow: none; 
+    }
+
+    .left-panel, .right-panel {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .actions {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .encrypt-btn, .decrypt-btn {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .right-panel {
+        padding-top: 20px;
+        min-height: auto;
     }
 }
